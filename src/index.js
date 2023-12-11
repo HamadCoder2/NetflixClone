@@ -41,7 +41,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-mongoose.connect(uri, {
+mongoose.connect(process.env.MONGODB_URI, {
     writeConcern: { w: 'majority', wtimeout: 0 },
 })
     .then(() => {
