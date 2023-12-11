@@ -4,7 +4,7 @@ const session = require("express-session");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
-const MongoStore = require('connect-mongo');
+const MongoDBStore = require('connect-mongodb-session')(session);
 const flash = require("express-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
@@ -21,9 +21,13 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-let store = new MongoStore({
-    mongoUrl: uri,
-    collection: "sessions"
+const store = new MongoDBStore({
+ uri: MONGO_URI,
+ collections: 'sessions'
+});
+
+store.on('error', function(error) {
+   console.log(error);
 });
 
 app.use(session({
@@ -32,7 +36,7 @@ app.use(session({
     saveUninitialized: true,
     store: store,
     cookie: {
-        secure: false,
+        secure: true,
         maxAge: 5 * 24 * 60 * 60 * 1000,
     }
 }));
@@ -41,7 +45,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(process.env.MONGO_URI, {
     writeConcern: { w: 'majority', wtimeout: 0 },
 })
     .then(() => {
