@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix India - Watch Tv Show Online</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/movie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
+
+<body>
+
+
+    <header>
+        <nav>
+            <div class="nav1">
+                <div class="menu-icon">&#9776;</div>
+                <a href="/home"> <img src="img/Netflix-Brand-Logo.png" alt=""></a>
+                <ul class="nav-links">
+                    <li><a href="/home" class="active">Home</a></li>
+                    <li><a href="/tvshow">TV show</a></li>
+                    <li><a href="/movie">movie</a></li>
+                    <li><a href="/new&popular">New&popular</a></li>
+                    <li><a href="/mylist">Mylist</a></li>
+                </ul>
+            </div>
+
+            <div class="nav2">
+                <div class="search">
+                    <a href="" class="navbar-brand"> <i class="fa fa-search"></i></a>
+                </div>
+                <div class="notification">
+                    <a href="" class="navbar-brand"><i class="far fa-regular fa-bell"></i></a>
+                </div>
+                <div class="dropdown ">
+                    <a href="/" class="d-block  link-body-emphasis text-decoration-none dropdown-toggle"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="img/profile.png">
+                    </a>
+                    <ul class="dropdown-menu text-left">
+                        
+                        <li><a class="dropdown-item" href="/movie"><%=user.username%></a></li>
+                        <!-- <li><a class="dropdown-item" href="/movie">Profile</a></li> -->
+                        <li><a class="dropdown-item" href="/exit-profile/<%=user.username%>">Exit profile</a></li>
+                        <!-- <li><a class="dropdown-item" href="#">Transfer profile</a></li> -->
+                        <!-- <li><a class="dropdown-item" href="#">Account</a></li> -->
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/logout">Sign out of netflix</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero-section">
+        <div class="demoinfo row justify-content-start">
+            <div class="col-md-5">
+                <img src="img/movieimg/pic1.webp" alt="">
+                <p class="py-4">from child prodigy to trailblazing captain sports icon mithali raj navigates the high
+                    and lows of professionals cricket in-this coming age of drama. </p>
+                <div class="btn-grp">
+                    <a href="https://www.youtube.com/watch?v=FLd_ZeEe9pc&ab_channel=Viacom18Studios" target="_blank"
+                        class="navbar-brand" style="background-color: #fff; color: #000;"><i
+                            class="fas fa-solid fa-play fs-5"></i> play</a>
+                    <a href="https://en.wikipedia.org/wiki/Shabaash_Mithu" target="_blank" class="navbar-brand ms-2"
+                        style="background-color: rgba(109, 109, 110, 0.7); color: #ffffff;"><i
+                            class="fas fa-solid fa-circle-info fs-4"></i> more info</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="movie-list">
+        <h1>Movie set in india</h1>
+        <div class="carousel">
+            <div class="card">
+                <img src="https://occ-0-2484-3662.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABQHWSIa_MlXmozQpffaDXZWNyHvUrvwyK6xSZmyy_ErqQipFy61UVOFE6Rh1Qv5DRDJV0ctPPUu5cp5qJrd1bEZww4Mq8Ud3tcg.webp?r=f7c"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>Gumraah</h2>
+                    <p>Exciting thriller</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=gVghVjAvxJo&ab_channel=DESIAATANK" target="_blank"><i
+                                class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Gumraah_(2023_film)" target="_blank"><i
+                                class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://occ-0-2484-3662.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABbilDvjrw3Ve-IHacoZ7P61Vq27lqbyMKqgk4ZvZH7qxykw94ID1oI2C_agWTqfEAVswn2t0PJ_fnkjaQprSUKMShItX4Qkohkw.webp?r=60a"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>KHUSHI</h2>
+                    <p>Exciting thriller</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=bk_5n4mS-lk" target="_blank"><i
+                                class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Kushi_(2023_film)" target="_blank"><i
+                                class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+                <img src="https://occ-0-2484-3662.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABRvHS9ZdM1D5sMGa7mkXaEj2rdu-MZjZICpx8PIlNXyWI5M16KrI3URnOZIkN3hZs7nviYKm3DVUQt3Cub3GMfm-eOms0bo6pJycGJm7ihj2_KMXuWvGIs2hVmb0Npu3IFZjEL-qQv7QKgCgOZ67TESfAi3k6ZMu7GQWxtN2z3MtdLQHD6rK_b7TYLQkHn0vWSoN9CdFl1C-XENiTWbMRnRPV_60RsGCAV-w0PMR2VOyi4xBgQaDgOrzrNyLpuUxdc3umNAVRvoiE82RKBeo3bPfLNkxDtgVjvyrnnhcoP7gUq7z1SsmVbzHdoCg7Qrh8ebgkSNIKxz9i-1xx7k6zoc.webp?r=dd5"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>Irugapatru</h2>
+                    <p>Exciting thriller</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=x82MBPDCOmU&ab_channel=PotentialStudios"
+                            target="_blank"><i class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Irugapatru" target="_blank"><i
+                                class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+                <img src="https://occ-0-2484-3662.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABXMQMyMI7BXeKLxqevfm608sKbLNUEunbZ8wPOAvn4wkFBNgRkLXS0FRmNyGqDcNZ5tWoOR9B3ZKEaJ4-v1nl6eeJfosefhT7IY.webp?r=7ac"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>RRR</h2>
+                    <p>Exciting thriller</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=1qHqzqe0b4A&ab_channel=imrul587" target="_blank"><i
+                                class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/RRR" target="_blank"><i
+                                class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://occ-0-2484-3662.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABVgtZzZGyqL7ykCwgkLOB74BItgzxM-TtTsZbSP6yjlKxVe4N0dTEo7zLd6W9pOVhIB_qJoh61xSu4MLry0Mx--l9XUeH3yl28Y.webp?r=786"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>Gangubai Kathiwadi</h2>
+                    <p>Exciting thriller</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=1gFkwiHHmXE&ab_channel=Sekhahodaliya"
+                            target="_blank"><i class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Gangubai_Kathiawadi" target="_blank"><i
+                                class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://occ-0-2484-3662.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABbfHlofLipFZcoxSS-4NhJWPWpSFwO0WALMwoCMqNP1jp6F3C5zhY6S-d7vDNR6wsLHNeXzjN8IlN_yQ7W9unDAtfmNtUfxMEgo.webp?r=ff0"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>Lal Singh Chada</h2>
+                    <p>Exciting thriller</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=gpMZS8iaZ-E&ab_channel=SSFilms" target="_blank"><i
+                                class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Laal_Singh_Chaddha" target="_blank"><i
+                                class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://occ-0-2484-3662.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABVdloOt_WBUTMXn7QpEbWU7okbGwAoBhvW9TLE8ishUL8FZEjz3YQNbt8f24dSH9lGMrFYfv2EnSL2pWiIZCcRXwt_M9F1DLUYbwYOuN81gujKQ1Y0WEo0gUqhEZXC-dV87M1WiNya83kGO-AelTG0apqij51G0k4-fjyNoZMKP8BkVcfbSbZl5YU9t7qgI.jpg?r=03a"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>The Railway Men</h2>
+                    <p>Actions thriller</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=iD3TZ_Xxc14&ab_channel=NetflixIndia" target="_blank"><i
+                                class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.m.wikipedia.org/wiki/The_Railway_Men" target="_blank"><i
+                                class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="movie-list">
+        <h1>Trending Now</h1>
+        <div class="carousel">
+            <div class="card">
+                <img src="https://occ-0-2484-3662.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABcZAjMtq86VNz89XDlwTVSRbOpUVW9JCST86UR2cqp3OIqx5GQOdaB0aosQaKGU9UCAlHdvK00Z04DyIjtWBYfQeuodmwn2kNeHg4NmZBrXMn8jlPUuLlPlakLuR_UxgecMG.jpg?r=4ed"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>Mission Majnu</h2>
+                    <p>Exciting thriller</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=Nyz7suxlrI4&ab_channel=NetflixIndia" target="_blank"><i class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Mission_Majnu" target="_blank"><i class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://occ-0-2610-3647.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTemiQLHxBvI8yx61xtLJnGc54mhP-ULQXS8AbNh5DhdC5QVahpQdULYhuBig7eAA9AaUmEkRVu7r8AGyJR-QCtiZnTHqXSJq0k5OHZB-SYUNNfzOCTKn4ztJ2pRu8Tnba0og_mfd9JjP0HCyLxc-OqMiWF_N1EFrbs.webp?r=b0f"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>JAWAN</h2>
+                    <p>Exciting action thriller</p>
+                    <div class="links-btn">
+                        <a href="https://en.wikipedia.org/wiki/Jawan_(film)" target="_blank"><i class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Jawan_(film)" target="_blank"><i class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+                <img src="https://occ-0-2610-3647.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABQell8uEWK4AayHGkgU10FE-5Ozeo8xurSSgUePpVivIC_XeqoAbr5YbwM2pTP9S8ztZyJaYAmVgvIN6QOEW7bRKa3Y1wiHEi3QOUv-pEofsm9PMiWNyOnbqi44mGs7i1bCoe_yvBEkff8joVbu9BrF8I_3pyfzeYmTDEY-hN4OkkhwoZxkLkXVxHY9KhNNsU3KuhBrig8HLF3pJSoEoKCe1AEdTVj-O1y-mN5bpJLPYH3ZpMJqpqlls2tMKKdaQld8Ew0iw-JRHGECDWM4c8YA9j8k-oi4fH_1uws-n-LtSFzxhQF5-lfizYgULKrRVEBMLcedLZS7994VKDo9fw4k.webp?r=330"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>SUKHEE</h2>
+                    <p>Dramedy Gals Pals</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=0CfmH-hITQ8&ab_channel=NetflixIndia" target="_blank"><i class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Sukhee" target="_blank"><i class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://occ-0-2610-3647.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABSLGLAxGdABTg8r_XibXpPe5PrwnQGpN49JPjjjWfzq-E-Yp4RcOf0TkB6-CDXbC5EeC4e8-J_BqeuwCJvNob6r4PWUzye0JboA.webp?r=b8a"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>RAW</h2>
+                    <p>Action thriller Militry</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=0q7bKjLa0Nc&ab_channel=SunMarathi" target="_blank"><i class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Beast_(2022_Indian_film)" target="_blank"><i class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://occ-0-2610-3647.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABRq1xwMxPYns03Fu7UMJl0CN1V-nN4qE4jIZD-EygTz_NGvd85nwsRgMUdOZZDxqzoacC4o__vIQuYZFvhCUQa7rzsx6xJbuyPYMp0t_F_vVHABdXEwd7bSCRa4D-OtdDJfZ.jpg?r=06f"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>Scoope</h2>
+                    <p>Suspensiful Dramedy</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=mmnQzRP-NZ4&ab_channel=NetflixIndia" target="_blank"><i class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Scoop_(Indian_TV_series)" target="_blank"><i class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+                <img src="https://occ-0-2610-3647.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABSB7e-69bRRj4Jv55Dwf5XjGvx3zCIP0uJmybPHGs6gomVhFSsvQwpE7Obc-Mu4svtwcFa44MUmQnzuiC5wzQrp2UUaPREZegmg.webp?r=d86"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>KANTRA</h2>
+                    <p>Dark ACtion thriller</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=6oKFao0aISA&ab_channel=NetflixIndia" target="_blank"><i class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Kantara_(film)" target="_blank"><i class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://occ-0-2610-3647.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABQ3MPqROuDTQQIe9k3YcbG7Z4H7elFDDpmc6ai24V0fOe2WL06H1E3Mo4aXj98NYGGn1FLrIRUr-SjeEjOcDJxUAlEs64-31D8w.webp?r=6e7"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>Mrs Chatterjee vs Norway</h2>
+                    <p>Drama Bollywood</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=1Bll53fBa9U&ab_channel=NetflixIndia" target="_blank"><i class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Mrs._Chatterjee_vs_Norway" target="_blank"><i class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <section id="movie-list">
+        <h1>suspensible Movie</h1>
+        <div class="carousel">
+            <div class="card">
+                <img src="https://occ-0-2484-3662.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABWXHKTz8CdILr8aNFQlhjMPyTmJqDvxP3Ps6fL6KvfDfRu5oYz-74Pn63COkTnRgESnZw2RyTiK1AlE2DQfT5-6c2z6HKFdlPUGqC8j0-Uztm_YDPFSFoskkJVcgtMVCrR6Z.jpg?r=d61"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>TROLL</h2>
+                    <p>Exciting Fantsy Movie</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=Bej9yR35BpE&ab_channel=EntertainmentReports" target="_blank"><i class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Troll_(2022_film)" target="_blank"><i class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://occ-0-2484-3662.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABcZTo4q8eBis43mWIaXWVp3ByWYaLgmCzNW-fvuyv_c5jVdab98ld-CfCc2HIVI4t4f6dNyJGMtT5Elxe9-9iKqksYSaeqWF96HEcx9wTB3okrI2GNk6TxrG0nQbjO_y4AWNEAMHjvLMFxk3hccxQhyVZ-Ys1ko_AKyqfssTEz8A3WCJvaFR6FCq0yJsiPoQ95UmWQEsdEaG5CDKDsU9ZETnVKiIbCiuWcAKGy5Fzo73qnHPORobN7bMIlSz81aZhsIuXoTqokHImYifcVufCAvOpfo-bvxRtM95YdW4ncUHZAgUSdi1L6u0.jpg?r=ca3"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>The Killer </h2>
+                    <p>Dark Thriller </p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=5S7FR_HCg9g&ab_channel=Netflix" target="_blank"><i class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/The_Killer_(2023_film)" target="_blank"><i class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://occ-0-2484-3662.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABQN1xmgJFDVm4Qc50zqIpk7gv44kQMhZPgRfvjrmvJiqEk9XpPq4Z9OcOHf80g9x3ZXMQG3bnpUSg3TDw3q30ZwLfLBkvBUyrZg.webp?r=d64"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>Stree</h2>
+                    <p>Horror Comedy Ghost</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=e0xcqIrL49w&ab_channel=ANDMovies" target="_blank"><i class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Stree_(2018_film)" target="_blank"><i class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://occ-0-2484-3662.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABeaIMb8iduh3RjmsKeOgt7J6HOIYuqLpzARms4r_bNlh-TIjuAqLjRfEM-QjOJ_JPNH5lGSJL7dQhaxESokcjQo2lBi0SfxfJ_lbkCc8drx6BW85H_817ACbwXGuQgTyWTo_.jpg?r=021"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>RUN</h2>
+                    <p>Suspensiful Teen Screen</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=EoGojQE4p-8&ab_channel=Netflix" target="_blank"><i class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Run_(2020_American_film)" target="_blank"><i class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://occ-0-2484-3662.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABRC5LwW2GFrOFleWfeN-kaO9-Df4_CSDHFC_tU9zc6ImaNFOres5O1yMT9g3BVTKiHJR1bKJavQDtNl2F6Jy_gf91d5kflqgjRCICSbCj66PIxCLKe63cMUqnQmWEeRChMh5.jpg?r=aab"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>Triple Frontier</h2>
+                    <p>Suspensiful Action Thriller</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=Fo3yRLLrXQA&ab_channel=Netflix" target="_blank"><i class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/Triple_Frontier_(film)" target="_blank"><i class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://occ-0-2484-3662.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABdKlp86s3FqhJkIcDgb_EU7RY_3c2Uv5BAMioLybOl0B0qCDz-iMJIxudm2a9VnKTAi4_6UucY-vNBUtd_eVM6yGy0ntbMhAWG_z1UDq_qcYoUEbwngH9qazed8nM_DQ6Dbh.jpg?r=d13"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>The Mother</h2>
+                    <p>Action Thriller</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=Awmni5mbyWE&ab_channel=Netflix" target="_blank"><i class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/The_Mother_(2023_film)" target="_blank"><i class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://occ-0-2484-3662.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABStkpqk9vmq_ukjeGe_vEIDerA9LxYPwD9UhpkGGbOcYqv_zhwizRh96jG2-g5qr1s95awboRxl-xXJo66u73wli00rTmcahGR0.webp?r=420"
+                    style="width: 220px;" alt="">
+                <div class="overlay">
+                    <h2>65</h2>
+                    <p>Exciting Creture Feature</p>
+                    <div class="links-btn">
+                        <a href="https://www.youtube.com/watch?v=bHXejJq5vr0&ab_channel=SonyPicturesEntertainment" target="_blank"><i class="fas fa-solid fa-play"></i></a>
+                        <a href=""><i class="fas fa-solid fa-plus"></i></a>
+                        <a href="https://en.wikipedia.org/wiki/65_(film)" target="_blank"><i class="fas fa-solid fa-circle-info"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <footer>
+        <div class="icon-grp col-2">
+            <a href=""><i class=" fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class=" fa-brands fa-instagram"></i></a>
+            <a href=""><i class=" fa-brands fa-twitter"></i></a>
+            <a href=""><i class=" fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="other-links row col-12 mt-4">
+            <div class="col-md-3 ">
+                <a href="">Audio Descrption</a>
+                <a href="">Investor relation</a>
+                <a href="">legal Notice</a>
+                <a href="" class="service-code">service code</a>
+                <span>&copy;1997-2023 Netflix,Inc</span>
+            </div>
+            <div class="col-md-3">
+                <a href="">Help Center</a>
+                <a href="">Jobs</a>
+                <a href="">Cookie Preference</a>
+            </div>
+            <div class="col-md-3">
+                <a href="">Gift Card</a>
+                <a href="">Terms of Use</a>
+                <a href="">corporate Information</a>
+            </div>
+            <div class="col-md-3">
+                <a href="">Media Center</a>
+                <a href="">Privacy</a>
+                <a href="">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <script src="js/index.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('.carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 5,
+                adaptiveHeight: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+    </script>
+</body>
+
+</html>

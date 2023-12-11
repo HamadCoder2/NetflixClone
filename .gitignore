@@ -1,0 +1,12 @@
+# .gitignore
+
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore .env file
+.env
+# Local Netlify folder
+.netlify
+
+.vercel

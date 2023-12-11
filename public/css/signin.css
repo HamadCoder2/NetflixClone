@@ -1,0 +1,219 @@
+
+*{
+    font-family: sans-serif;
+}
+header a img {
+    width: 230px;
+    padding-left: 20px;
+    background: transparent;
+}
+
+section {
+    height: 900px;
+    background-image: url("../img/netflixbg.jpg");
+    box-shadow: inset 0 0 0 3000px #0000007a;
+}
+
+section .max-width {
+    max-width: 450px;
+    margin: 0px auto;
+    /* border: 1px solid red; */
+    padding: 50px 50px;
+    box-shadow: inset 0 0 0 100px #0000007a;
+    background-color: black;
+    border-radius: 3px;
+}
+
+section form {
+    display: flex;
+    flex-direction: column;
+}
+
+section form label {
+    color: #fff;
+}
+
+section form input[type=email] {
+    padding: 12px 20px;
+    border-radius: 7px;
+    outline: none;
+    background-color: #282727;
+    color: #fff;
+    border: none;
+
+}
+
+section form input[type=email]:focus {
+
+    background-color: #282727;
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+
+}
+
+section form input[type=password] {
+    padding: 12px 20px;
+    border-radius: 7px;
+    outline: none;
+    background-color: #282727;
+    color: #fff;
+    border: none;
+
+}
+
+section form input[type=password]:focus{
+    background-color: #282727;
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+
+}
+
+section form button {
+    margin-top: 20px;
+    padding: 8px 20px;
+    border-radius: 7px;
+    outline: none;
+    font-size: 19px;
+    font-weight: 600;
+    background-color: rgb(217, 9, 9);
+    color: #fff;
+    border: none
+}
+
+
+
+section form .remeber {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+
+
+section form .remeber span {
+    color: #a5a4a4;
+}
+
+.material-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #a5a4a4;
+    cursor: pointer;
+}
+
+.material-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkmark {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    border: 2px solid #818181;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.material-checkbox input[type="checkbox"]:checked~.checkmark {
+    background-color: #535353;
+    border-color: #787878;
+}
+
+.material-checkbox input[type="checkbox"]:checked~.checkmark:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 4px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.material-checkbox input[type="checkbox"]:focus~.checkmark {
+    box-shadow: 0 0 0 2px #00000065;
+}
+
+.material-checkbox:hover input[type="checkbox"]~.checkmark {
+    border-color: #5e5e5e;
+}
+
+.material-checkbox input[type="checkbox"]:disabled~.checkmark {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.material-checkbox input[type="checkbox"]:disabled~.checkmark:hover {
+    border-color: #4d4d4d;
+}
+
+
+section h3 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 32px;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+
+section div p {
+    padding-top: 30px;
+    color: #a5a4a4;
+}
+
+section div p a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+}
+
+
+section footer {
+    margin-top: 120px;
+    background-color: #000000;
+    padding: 70px 180px;
+}
+
+section footer .row .col-md-3 li {
+    padding-top: 30px;
+    list-style: none;
+
+}
+
+section footer .row .col-md-3 li a {
+    color: #a5a4a4;
+    text-decoration: none;
+
+}
+
+section footer .row .col-md-3 li a:hover {
+    text-decoration: underline;
+
+}
+
+@media(max-width:576px) {
+    section .max-width {
+        max-width: 450px;
+        margin: 20px auto;
+        /* border: 1px solid red; */
+        padding: 50px 30px;
+        box-shadow: inset 0 0 0 100px #0000007a;
+        background-color: black;
+    }
+
+    section footer {
+        margin-top: 120px;
+        background-color: #000000;
+        padding: 40px 40px;
+    }
+
+}

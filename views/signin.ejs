@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix India - Watch Tv Show Online</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/signin.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <section class="signin-section">
+        <header>
+            <a href="/"> <img src="img/Netflix-Brand-Logo.png" alt=""></a>
+        </header>
+
+
+        <div class="max-width">
+            <% if (messages.error) { %>
+                <div>
+                    <p style="color: red;"><%= messages.error %></p>
+                </div>
+                <% } %>
+                    <form action="/login" method="POST">
+                        <h3>sign in</h3>
+                        <div class="form-floating mb-3">
+                            <input type="email" name="username" class="form-control" id="floatingInput"
+                                placeholder="name@example.com" required>
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" name="password" class="form-control" id="floatingPassword"
+                                placeholder="Password" required>
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <button type="submit" value="submit">sign in</button>
+                        <div class="remeber">
+                            <label class="material-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Rememeber Me
+                            </label>
+                            <span><a href="#" class="navbar-brand">forgot password?</a></span>
+                        </div>
+                        <div>
+                            <p>New to Netflix ? <a href="/"> Sign up now</a></p>
+                            <p> This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.</p>
+                        </div>
+                    </form>
+        </div>
+
+
+
+
+        <footer>
+            <div class="row">
+                <div class="col-md-3">
+                    <li><a href="">Faqs</a></li>
+                    <li><a href="">cookie refernce</a></li>
+
+                </div>
+                <div class="col-md-3">
+                    <li><a href="">Help center</a></li>
+                    <li><a href=""> Corporate Information</a></li>
+
+                </div>
+                <div class="col-md-3">
+                    <li><a href="">Terms of use </a></li>
+
+                </div>
+                <div class="col-md-3">
+                    <li><a href="">privacy</a></li>
+                </div>
+            </div>
+        </footer>
+
+
+    </section>
+</body>
+
+</html>
