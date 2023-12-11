@@ -10,10 +10,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const passportLocalMongoose = require("passport-local-mongoose");
 
-
 const app = express();
-const uri = process.env.MONGO_URI 
-
 
 app.use(flash());
 app.use(express.static("public"));
@@ -36,7 +33,7 @@ app.use(session({
     saveUninitialized: true,
     store: store,
     cookie: {
-        secure: true,
+        secure: false,
         maxAge: 5 * 24 * 60 * 60 * 1000,
     }
 }));
@@ -44,7 +41,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-
+const uri = process.env.MONGO_URI 
 mongoose.connect(process.env.MONGO_URI, {
     writeConcern: { w: 'majority', wtimeout: 0 },
 })
@@ -119,6 +116,15 @@ app.get("/mylist", (req, res) => {
     res.render("mylist", { user: req.user });
 });
 
+app.get("/logout", (req, res) => {
+    req.logout((err) => {
+        if (err) {
+            return next(err);
+        }
+        res.redirect("/");
+    });
+});
+
 app.post("/signup", async (req, res) => {
     const username = req.body.username;
     const user = await User.findOne({ email: username }).exec();
@@ -174,17 +180,6 @@ app.post("/login", function (req, res, next) {
             return res.redirect("/home");
         });
     })(req, res, next);
-});
-
-
-
-app.get("/logout", (req, res) => {
-    req.logout((err) => {
-        if (err) {
-            return next(err);
-        }
-        res.redirect("/");
-    });
 });
 
 
