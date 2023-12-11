@@ -41,7 +41,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true ,
+mongoose.connect(uri, {
     writeConcern: { w: 'majority', wtimeout: 0 },
 })
     .then(() => {
