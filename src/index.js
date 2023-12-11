@@ -91,26 +91,6 @@ app.get("/signin", (req, res) => {
     res.render("signin");
 });
 
-app.get("/memebershipplan", (req, res) => {
-    res.render("memebershipplan");
-});
-
-app.get("/plan", (req, res) => {
-    res.render("plan");
-});
-
-app.get("/paymentcard", (req, res) => {
-    res.render("paymentcard");
-});
-
-app.get("/upipayment", (req, res) => {
-    res.render("upipayment");
-});
-
-app.get("/payment", (req, res) => {
-    res.render("payment");
-});
-
 app.get("/home", (req, res) => {
     if (req.isAuthenticated()) {
         res.render("home", { user: req.user });
