@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const store = new MongoDBStore({
- uri: MONGO_URI,
+ uri: process.env.MONGO_URI,
  collections: 'sessions'
 });
 
