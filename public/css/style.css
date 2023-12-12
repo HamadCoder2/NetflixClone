@@ -151,7 +151,7 @@ select {
     color: #fff;
     font-size: 18px;
     text-align: left;
-    border: 2px solid rgb(162, 161, 161);
+    border: 1px solid rgb(162, 161, 161);
     transition: color 250ms cubic-bezier(0.5, 0, 0.1, 1) 0s;
     box-shadow: none;
 }
@@ -614,6 +614,9 @@ footer .col-md-3 li a {
         padding: 0px 10px 5px 3px;
     }
 
+     .banner {
+        height: 600px;
+    } 
     .logo img {
         width: 120px;
     }
