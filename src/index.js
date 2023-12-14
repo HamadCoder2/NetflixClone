@@ -42,7 +42,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 const uri = process.env.MONGO_URI 
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect(uri, {
     writeConcern: { w: 'majority', wtimeout: 0 },
 })
     .then(() => {
