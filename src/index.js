@@ -4,7 +4,7 @@ const session = require("express-session");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
-const MongoDBStore = require('connect-mongodb-session')(session);
+// const MongoDBStore = require('connect-mongodb-session')(session);
 const flash = require("express-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
@@ -18,20 +18,20 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const store = new MongoDBStore({
- uri: process.env.MONGO_URI,
- collections: 'sessions'
-});
+// const store = new MongoDBStore({
+//  uri: process.env.MONGO_URI,
+//  collections: 'sessions'
+// });
 
-store.on('error', function(error) {
-   console.log(error);
-});
+// store.on('error', function(error) {
+//    console.log(error);
+// });
 
 app.use(session({
     secret: process.env.SECRET_KEY,
     resave: false,
     saveUninitialized: true,
-    store: store,
+    // store: store,
     cookie: {
         secure: false,
         maxAge: 5 * 24 * 60 * 60 * 1000,
@@ -41,8 +41,8 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-const uri = process.env.MONGO_URI 
-mongoose.connect(process.env.MONGO_URI , {
+const db = process.env.MONGO_URI 
+mongoose.connect(db, {
     writeConcern: { w: 'majority', wtimeout: 0 },
 })
     .then(() => {
