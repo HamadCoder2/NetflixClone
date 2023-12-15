@@ -127,7 +127,7 @@ app.get("/logout", (req, res) => {
 
 app.post("/signup", async (req, res) => {
     const username = req.body.username;
-    const user = await User.findOne({ email: username }).exec().maxTimeMS(10000);
+    const user = await User.findOne({ email: username }).exec();
 
     if (user) {
         req.flash('error', `Email is already registered. Please choose a different email.`);
